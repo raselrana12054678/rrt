@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.header-area {
+    background-color: aqua;
+    padding-bottom: 30px;
+}
+.container {
+    width: 1170px;
+    margin: auto;
+}
+.logo {
+    float: left;
+    padding-top: 13px;
+}
+ 
+.main-menu {
+    float: left;
+    width: 83%;
+    text-align: right;
+    margin: 0 auto;
+}
+.main-menu ul {
+    
+}
+.main-menu ul li {
+    display: inline-block;
+    margin-left: 40px; 
+    position: relative;
+}
+.main-menu ul li a {
+    color: #666666;
+    font-size: 15px;
+    padding: 30px 0;
+    font-family: 'Lato', sans-serif;
+    text-decoration: none;
+    display: block;
+}
+.main-menu ul li a:hover {
+    color: #4272d7;
+}
+
+/***submenu start here***/
+.main-menu ul li ul.Submenu {
+    left: 0;
+    border-top: 5px solid #4272d7;
+    background-color: #171a21;
+        position: absolute;
+        top: 110%;
+        width: 260px;
+        transition: .6s;
+        visibility: hidden;
+    }
+    .main-menu ul li:hover ul.Submenu {
+        visibility: visible;
+        top: 100%;
+    }
+    .main-menu ul li ul.Submenu li {
+        margin: 0;
+        display: block;
+        border-bottom: 2px solid #666666;
+        border-top: 10px;
+    }
+    .main-menu ul li ul.Submenu li a {
+        padding: 15px 20px;
+        top: 100%;
+        color: white;
+        transition: .6s;
+        text-align: left;
+    }
+    .main-menu ul li ul.Submenu li a:hover {
+        background-color: #4272d7;
+    }
+/***submenu end here***/
+
+
+/***submenu 2 start here***/
+.main-menu ul li ul.Submenu li ul.Submenu {
+    left: 100%;
+    top: 0;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.main-menu ul li ul.Submenu li:hover ul.Submenu {
+    visibility: visible;
+    opacity: 1;
+}
+/****submenu end here***/
+
+.icon-items{
+    overflow: hidden;
+    text-align: right;
+    padding-top: 30px;
+    position: relative;
+}
+.icon-items::before {
+    content: '';
+    width: 2px;
+    height: 15px;
+    position: absolute;
+    left: 20px;
+    background-color: red;
+
+}
